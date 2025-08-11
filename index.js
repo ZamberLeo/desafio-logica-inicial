@@ -1,24 +1,23 @@
-let heroName = "Felipe, the Greatest";
-let XPNumber = 1;
-let heroRank = "Sem Ranque";
+function MatchBalance(WinsMatch,LoseMatch){
+    return WinsMatch - LoseMatch
+};
 
-if (XPNumber < 1000 ){
+let playerMatch = MatchBalance(100,4);
+
+if (playerMatch < 10 ){
     heroRank = "Ferro"
-} else if (XPNumber > 1001 && XPNumber < 2000 ){
+} else if (playerMatch >= 11 && playerMatch < 20 ){
     heroRank = "Bronze"
-} else if (XPNumber > 2001 && XPNumber < 5000 ){
+} else if (playerMatch >= 21 && playerMatch < 50 ){
     heroRank = "Prata"
-} else if (XPNumber > 5001 && XPNumber < 7000 ){
+} else if (playerMatch >= 51 && playerMatch < 80 ){
     heroRank = "Ouro"
-} else if (XPNumber > 7001 && XPNumber < 8000 ){
-    heroRank = "Platina"
-} else if (XPNumber > 9001 && XPNumber < 9000 ){
-    heroRank = "Ascendente"
-} else if (XPNumber > 10.000 ){
-    heroRank = "Imortal"
-} else{
+} else if (playerMatch >= 81 && playerMatch < 90 ){
+    heroRank = "Diamante"
+} else if (playerMatch >= 91 && playerMatch < 100 ){
+    heroRank = "Lendário"
+} else if (playerMatch >= 101){ 
     heroRank = "Imortal"
 };
 
-console.log("O Herói de nome " + heroName + " está no nível de " + heroRank );
-    
+console.log(`O Herói tem de saldo de ${playerMatch} está no nível de ${heroRank}`);
